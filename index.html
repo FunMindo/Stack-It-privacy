@@ -31,7 +31,6 @@
     min-height: 100vh;
   }
 
-  /* ── Background grid ── */
   body::before {
     content: '';
     position: fixed; inset: 0; z-index: 0;
@@ -50,10 +49,7 @@
   }
 
   /* ── Header ── */
-  .header {
-    text-align: center;
-    margin-bottom: 52px;
-  }
+  .header { text-align: center; margin-bottom: 52px; }
 
   .studio-badge {
     display: inline-flex;
@@ -71,22 +67,17 @@
     color: var(--accent2);
     margin-bottom: 20px;
   }
-
-  .studio-badge::before {
-    content: '🎮';
-    font-size: 14px;
-  }
+  .studio-badge::before { content: '🎮'; font-size: 14px; }
 
   h1 {
     font-family: 'Syne', sans-serif;
-    font-size: clamp(28px, 5vw, 44px);
+    font-size: clamp(26px, 5vw, 44px);
     font-weight: 800;
     color: #fff;
     letter-spacing: -0.02em;
     line-height: 1.15;
     margin-bottom: 14px;
   }
-
   h1 span {
     background: linear-gradient(120deg, var(--accent), var(--accent2));
     -webkit-background-clip: text;
@@ -94,14 +85,8 @@
     background-clip: text;
   }
 
-  .header-meta {
-    color: var(--muted);
-    font-size: 13.5px;
-  }
-
-  .header-meta strong {
-    color: var(--accent2);
-  }
+  .header-meta { color: var(--muted); font-size: 13.5px; }
+  .header-meta strong { color: var(--accent2); }
 
   /* ── Notice banner ── */
   .notice {
@@ -117,7 +102,6 @@
     color: #f5e4a0;
     line-height: 1.6;
   }
-
   .notice-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
 
   /* ── Section cards ── */
@@ -129,17 +113,9 @@
     margin-bottom: 18px;
     transition: border-color 0.2s;
   }
+  .section:hover { border-color: rgba(91,124,247,0.35); }
 
-  .section:hover {
-    border-color: rgba(91,124,247,0.35);
-  }
-
-  .section-header {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 16px;
-  }
+  .section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
 
   .section-num {
     width: 28px; height: 28px;
@@ -147,51 +123,44 @@
     border-radius: 8px;
     display: flex; align-items: center; justify-content: center;
     font-family: 'Syne', sans-serif;
-    font-size: 12px;
-    font-weight: 800;
-    color: #fff;
-    flex-shrink: 0;
+    font-size: 12px; font-weight: 800;
+    color: #fff; flex-shrink: 0;
   }
 
   h2 {
     font-family: 'Syne', sans-serif;
-    font-size: 16px;
-    font-weight: 700;
-    color: #fff;
-    letter-spacing: 0.01em;
+    font-size: 16px; font-weight: 700;
+    color: #fff; letter-spacing: 0.01em;
   }
 
   p { color: var(--text); margin-bottom: 10px; }
   p:last-child { margin-bottom: 0; }
 
   /* ── Data table ── */
+  .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; margin-top: 6px; }
+
   .data-table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 6px;
     font-size: 13.5px;
+    min-width: 540px;
   }
-
   .data-table th {
     background: rgba(91,124,247,0.1);
     color: var(--accent2);
     font-family: 'Syne', sans-serif;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 0.1em; text-transform: uppercase;
     padding: 10px 14px;
     text-align: left;
     border-bottom: 1px solid var(--border);
   }
-
   .data-table td {
     padding: 11px 14px;
     border-bottom: 1px solid rgba(99,120,200,0.08);
     color: var(--text);
     vertical-align: top;
   }
-
   .data-table tr:last-child td { border-bottom: none; }
   .data-table tr:hover td { background: rgba(91,124,247,0.04); }
 
@@ -201,24 +170,14 @@
     color: var(--accent2);
     border-radius: 4px;
     padding: 1px 7px;
-    font-size: 11.5px;
-    font-weight: 500;
+    font-size: 11.5px; font-weight: 500;
     white-space: nowrap;
   }
+  .tag.green { background: rgba(52,211,153,0.12); color: #6ee7b7; }
+  .tag.orange { background: rgba(251,146,60,0.12); color: #fdba74; }
 
-  .tag.green {
-    background: rgba(52,211,153,0.12);
-    color: #6ee7b7;
-  }
-
-  .tag.orange {
-    background: rgba(251,146,60,0.12);
-    color: #fdba74;
-  }
-
-  /* ── Third-party list ── */
+  /* ── Vendor list ── */
   .vendor-list { list-style: none; margin-top: 6px; }
-
   .vendor-list li {
     display: flex;
     align-items: flex-start;
@@ -227,57 +186,30 @@
     border-bottom: 1px solid rgba(99,120,200,0.08);
     font-size: 14px;
   }
-
   .vendor-list li:last-child { border-bottom: none; padding-bottom: 0; }
-
   .vendor-icon {
     width: 32px; height: 32px;
     border-radius: 8px;
     display: flex; align-items: center; justify-content: center;
-    font-size: 16px;
-    flex-shrink: 0;
+    font-size: 16px; flex-shrink: 0;
     background: rgba(91,124,247,0.1);
   }
-
-  .vendor-name {
-    font-family: 'Syne', sans-serif;
-    font-weight: 700;
-    font-size: 13.5px;
-    color: #fff;
-    margin-bottom: 2px;
-  }
-
+  .vendor-name { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 13.5px; color: #fff; margin-bottom: 2px; }
   .vendor-desc { color: var(--muted); font-size: 13px; }
-
-  .vendor-link {
-    display: inline-block;
-    margin-top: 4px;
-    font-size: 12px;
-    color: var(--accent);
-    text-decoration: none;
-  }
-
+  .vendor-link { display: inline-block; margin-top: 4px; font-size: 12px; color: var(--accent); text-decoration: none; }
   .vendor-link:hover { text-decoration: underline; }
 
   /* ── Bullet list ── */
-  .pp-list {
-    list-style: none;
-    margin-top: 6px;
-  }
-
+  .pp-list { list-style: none; margin-top: 6px; }
   .pp-list li {
     padding: 5px 0 5px 20px;
     position: relative;
-    font-size: 14px;
-    color: var(--text);
+    font-size: 14px; color: var(--text);
   }
-
   .pp-list li::before {
     content: '→';
     position: absolute; left: 0;
-    color: var(--accent);
-    font-size: 12px;
-    top: 7px;
+    color: var(--accent); font-size: 12px; top: 7px;
   }
 
   /* ── Contact card ── */
@@ -292,32 +224,14 @@
     gap: 16px;
     flex-wrap: wrap;
   }
-
-  .contact-icon {
-    font-size: 28px;
-    flex-shrink: 0;
-  }
-
+  .contact-icon { font-size: 28px; flex-shrink: 0; }
   .contact-text h3 {
     font-family: 'Syne', sans-serif;
-    font-size: 15px;
-    font-weight: 700;
-    color: #fff;
-    margin-bottom: 4px;
+    font-size: 15px; font-weight: 700;
+    color: #fff; margin-bottom: 4px;
   }
-
-  .contact-text p {
-    font-size: 13.5px;
-    color: var(--muted);
-    margin: 0;
-  }
-
-  .contact-text a {
-    color: var(--accent2);
-    text-decoration: none;
-    font-weight: 500;
-  }
-
+  .contact-text p { font-size: 13.5px; color: var(--muted); margin: 0; }
+  .contact-text a { color: var(--accent2); text-decoration: none; font-weight: 500; }
   .contact-text a:hover { text-decoration: underline; }
 
   /* ── Footer ── */
@@ -330,14 +244,42 @@
     font-size: 12.5px;
     line-height: 1.8;
   }
-
   .footer strong { color: var(--accent2); }
+  .footer a { color: var(--accent2); text-decoration: none; }
+  .footer a:hover { text-decoration: underline; }
 
-  @media (max-width: 540px) {
-    .wrapper { padding: 32px 16px 60px; }
-    .section { padding: 20px 18px; }
-    .data-table { font-size: 12.5px; }
-    .data-table th, .data-table td { padding: 9px 10px; }
+  /* ── Mobile / Tablet ── */
+  /* ── Mobile (≤640px) ── */
+  @media (max-width: 640px) {
+    .wrapper { padding: 24px 14px 56px; }
+    .section { padding: 16px 14px 14px; margin-bottom: 14px; }
+    .section-header { gap: 8px; margin-bottom: 12px; }
+    .header { margin-bottom: 28px; }
+    .studio-badge { font-size: 11px; padding: 5px 12px; }
+    h1 { font-size: clamp(22px, 8vw, 30px); }
+    h2 { font-size: 14px; }
+    p, .pp-list li { font-size: 13.5px; }
+    .notice { padding: 13px 14px; font-size: 13px; gap: 10px; }
+    .data-table th { font-size: 10px; padding: 8px 9px; }
+    .data-table td { font-size: 12.5px; padding: 9px 9px; }
+    /* Stack table on very narrow screens */
+    .data-table thead { display: none; }
+    .data-table tr { display: block; border-bottom: 1px solid rgba(99,120,200,0.15); padding: 8px 0; }
+    .data-table td { display: block; border: none; padding: 3px 9px; font-size: 13px; }
+    .data-table td::before { content: attr(data-label); display: block; font-size: 10px; font-weight: 700; color: var(--accent2); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 2px; }
+    .vendor-list li { flex-direction: column; gap: 6px; }
+    .contact-card { flex-direction: column; padding: 16px 14px; gap: 10px; }
+    .contact-card .contact-icon { font-size: 22px; }
+    .contact-text h3 { font-size: 14px; }
+    .tag { font-size: 11px; padding: 1px 6px; }
+    .pp-list li { padding-left: 18px; }
+  }
+
+  /* ── Tablet (641–1024px) ── */
+  @media (min-width: 641px) and (max-width: 1024px) {
+    .wrapper { padding: 36px 24px 68px; }
+    .section { padding: 22px 20px; }
+    h1 { font-size: clamp(26px, 4vw, 36px); }
   }
 </style>
 </head>
@@ -348,9 +290,10 @@
   <header class="header">
     <div class="studio-badge">FunMindo Studio</div>
     <h1>Privacy Policy<br/><span>Stack It!</span></h1>
+    <!-- FIX 4: Effective date aligned to April 25 to match EULA & Data Deletion (launch date) -->
     <p class="header-meta">
-      Effective Date: <strong>April 20, 2026</strong> &nbsp;·&nbsp;
-      Last Updated: <strong>April 20, 2026</strong> &nbsp;·&nbsp;
+      Effective Date: <strong>April 25, 2026</strong> &nbsp;·&nbsp;
+      Last Updated: <strong>April 25, 2026</strong> &nbsp;·&nbsp;
       Jurisdiction: <strong>India</strong>
     </p>
   </header>
@@ -373,54 +316,57 @@
       <h2>Information We Collect</h2>
     </div>
     <p>We collect only what is necessary to operate the Game and its features. The table below details exactly what is collected, why, and where it goes.</p>
-    <table class="data-table">
-      <thead>
-        <tr>
-          <th>Data Type</th>
-          <th>What It Is</th>
-          <th>Where It Goes</th>
-          <th>Required?</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><span class="tag">Anonymous Player ID</span></td>
-          <td>A randomly generated ID with no personal information attached. Not linked to your name, email, or device identity.</td>
-          <td>Unity Gaming Services servers</td>
-          <td><span class="tag green">Auto</span></td>
-        </tr>
-        <tr>
-          <td><span class="tag">Display Name</span></td>
-          <td>A nickname you choose yourself before entering the leaderboard. Only used to display your name on the leaderboard.</td>
-          <td>Unity Gaming Services servers</td>
-          <td><span class="tag orange">Optional</span></td>
-        </tr>
-        <tr>
-          <td><span class="tag">Game Scores</span></td>
-          <td>Your highest scores submitted to weekly and all-time leaderboards.</td>
-          <td>Unity Gaming Services servers</td>
-          <td><span class="tag orange">Optional</span></td>
-        </tr>
-        <tr>
-          <td><span class="tag">Device Info</span></td>
-          <td>Device model, OS version, screen size. Collected automatically by ad and analytics SDKs for performance and ad delivery.</td>
-          <td>Google (AdMob / Firebase)</td>
-          <td><span class="tag green">Auto</span></td>
-        </tr>
-        <tr>
-          <td><span class="tag">Advertising ID</span></td>
-          <td>A resettable advertising identifier (Google Advertising ID) used to serve relevant ads. You can reset or opt out at any time in your device settings.</td>
-          <td>Google AdMob servers</td>
-          <td><span class="tag green">Auto</span></td>
-        </tr>
-        <tr>
-          <td><span class="tag">Crash & Performance Data</span></td>
-          <td>Anonymous crash reports and performance metrics used to fix bugs and improve stability.</td>
-          <td>Firebase Crashlytics (Google)</td>
-          <td><span class="tag green">Auto</span></td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="table-scroll">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Data Type</th>
+            <th>What It Is</th>
+            <th>Where It Goes</th>
+            <th>Required?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Data Type"><span class="tag">Anonymous Player ID</span></td>
+            <td data-label="What It Is">A randomly generated ID with no personal information attached. Not linked to your name, email, or device identity.</td>
+            <td>Unity Gaming Services servers</td>
+            <td><span class="tag green">Auto</span></td>
+          </tr>
+          <tr>
+            <td data-label="Data Type"><span class="tag">Display Name</span></td>
+            <!-- FIX 2: Changed from "nickname you choose yourself" to reflect predefined name system -->
+            <td>A name selected from a safe, predefined list curated by FunMindo. No free-text entry is possible. Only used to display your name on the leaderboard.</td>
+            <td>Unity Gaming Services servers</td>
+            <td><span class="tag orange">Optional</span></td>
+          </tr>
+          <tr>
+            <td data-label="Data Type"><span class="tag">Game Scores</span></td>
+            <td data-label="What It Is">Your highest scores submitted to weekly and all-time leaderboards.</td>
+            <td>Unity Gaming Services servers</td>
+            <td><span class="tag orange">Optional</span></td>
+          </tr>
+          <tr>
+            <td data-label="Data Type"><span class="tag">Device Info</span></td>
+            <td data-label="What It Is">Device model, OS version, screen size. Collected automatically by ad and analytics SDKs for performance and ad delivery.</td>
+            <td>Google (AdMob / Firebase)</td>
+            <td><span class="tag green">Auto</span></td>
+          </tr>
+          <tr>
+            <td data-label="Data Type"><span class="tag">Advertising ID</span></td>
+            <td data-label="What It Is">A resettable advertising identifier (Google Advertising ID) used to serve relevant ads. You can reset or opt out at any time in your device settings.</td>
+            <td>Google AdMob servers</td>
+            <td><span class="tag green">Auto</span></td>
+          </tr>
+          <tr>
+            <td data-label="Data Type"><span class="tag">Crash &amp; Performance Data</span></td>
+            <td data-label="What It Is">Anonymous crash reports and performance metrics used to fix bugs and improve stability.</td>
+            <td>Firebase Crashlytics (Google)</td>
+            <td><span class="tag green">Auto</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <p style="margin-top:14px; color: var(--muted); font-size:13px;">
       ✅ We do <strong>not</strong> collect your real name, email address, phone number, location, photos, contacts, or any other sensitive personal information.
     </p>
@@ -471,7 +417,7 @@
         <div class="vendor-icon">🎮</div>
         <div>
           <div class="vendor-name">Unity Gaming Services (UGS)</div>
-          <div class="vendor-desc">Powers anonymous authentication and global leaderboards. Stores your chosen display name and scores. A randomly generated Player ID is used — no personal data is required to participate.</div>
+          <div class="vendor-desc">Powers anonymous authentication and global leaderboards. Stores your predefined display name and scores. A randomly generated Player ID is used — no personal data is required to participate.</div>
           <a class="vendor-link" href="https://unity.com/legal/privacy-policy" target="_blank">unity.com/legal/privacy-policy →</a>
         </div>
       </li>
@@ -521,8 +467,10 @@
       <div class="section-num">6</div>
       <h2>Children's Privacy</h2>
     </div>
-    <p>Stack It! is a casual game designed for a <strong>general audience</strong>. It is not specifically directed at children under the age of 13.</p>
-    <p>We do not knowingly collect personally identifiable information from children under 13. The leaderboard display name feature is intended for players aged 13 and above. If you are a parent or guardian and believe your child under 13 has provided personal information, please contact us immediately at <strong>funmindostudio@gmail.com</strong> and we will take steps to delete such information promptly.</p>
+    <p>Stack It! is a casual game designed for a <strong>general audience</strong>, rated for Everyone (3+) on Google Play.</p>
+    <!-- FIX 2 + FIX 3: Removed "intended for 13+" and replaced with predefined name child-safety explanation -->
+    <p>We do not knowingly collect personally identifiable information from children. The leaderboard display name feature is designed for all ages. Because all names are predefined and curated by FunMindo, no player (including young children) can enter personal or inappropriate information — the predefined name system protects all users on the leaderboard.</p>
+    <p>If you are a parent or guardian and have any concerns about your child's data, please contact us immediately at <strong>funmindostudio@gmail.com</strong> and we will take steps to address the issue promptly.</p>
     <p>Our advertising is not child-directed. AdMob is configured to serve general audience advertisements only.</p>
   </div>
 
@@ -546,7 +494,8 @@
     <ul class="pp-list">
       <li><strong>Access</strong> — Request information about what data we hold about you</li>
       <li><strong>Deletion</strong> — Request deletion of your leaderboard name and scores</li>
-      <li><strong>Correction</strong> — Change your leaderboard display name at any time in-game</li>
+      <!-- FIX 5: Correction right now accurately reflects that in-game name change is not possible after saving -->
+      <li><strong>Correction</strong> — Your leaderboard display name cannot be changed after saving. If you need it corrected, contact us at funmindostudio@gmail.com and we will assist</li>
       <li><strong>Opt-out</strong> — Disable personalised advertising via device settings (see Section 4)</li>
       <li><strong>Withdraw consent</strong> — Uninstall the game to stop all data collection</li>
     </ul>
@@ -587,8 +536,9 @@
   <footer class="footer">
     <p>© 2026 <strong>FunMindo</strong>. All rights reserved.</p>
     <p>Stack It! &nbsp;·&nbsp; Version 1.0 &nbsp;·&nbsp; Privacy Policy v1.0</p>
+    <!-- FIX 4: Footer date updated to match -->
     <p style="margin-top:8px; font-size:11.5px; color:#4a5578;">
-      This document was last reviewed on April 20, 2026.
+      This document was last reviewed on April 25, 2026.
     </p>
   </footer>
 
