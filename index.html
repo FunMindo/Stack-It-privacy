@@ -137,13 +137,12 @@
   p:last-child { margin-bottom: 0; }
 
   /* ── Data table ── */
-  .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; margin-top: 6px; }
+  .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; margin-top: 6px; -webkit-overflow-scrolling: touch; }
 
   .data-table {
     width: 100%;
     border-collapse: collapse;
     font-size: 13.5px;
-    min-width: 540px;
   }
   .data-table th {
     background: rgba(91,124,247,0.1);
@@ -260,13 +259,13 @@
     h2 { font-size: 14px; }
     p, .pp-list li { font-size: 13.5px; }
     .notice { padding: 13px 14px; font-size: 13px; gap: 10px; }
-    .data-table th { font-size: 10px; padding: 8px 9px; }
+    .data-table th { font-size: 11px; padding: 8px 8px; }
     .data-table td { font-size: 12.5px; padding: 9px 9px; }
     /* Stack table on very narrow screens */
     .data-table thead { display: none; }
     .data-table tr { display: block; border-bottom: 1px solid rgba(99,120,200,0.15); padding: 8px 0; }
     .data-table td { display: block; border: none; padding: 3px 9px; font-size: 13px; }
-    .data-table td::before { content: attr(data-label); display: block; font-size: 10px; font-weight: 700; color: var(--accent2); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 2px; }
+    .data-table td::before { content: attr(data-label); display: block; font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 2px; }
     .vendor-list li { flex-direction: column; gap: 6px; }
     .contact-card { flex-direction: column; padding: 16px 14px; gap: 10px; }
     .contact-card .contact-icon { font-size: 22px; }
@@ -330,45 +329,45 @@
           <tr>
             <td data-label="Data Type"><span class="tag">Anonymous Player ID</span></td>
             <td data-label="What It Is">A randomly generated ID with no personal information attached. Not linked to your name, email, or device identity.</td>
-            <td>Unity Gaming Services servers</td>
-            <td><span class="tag green">Auto</span></td>
+            <td data-label="Where It Goes">Unity Gaming Services servers</td>
+            <td data-label="Required?"><span class="tag green">Auto</span></td>
           </tr>
           <tr>
             <td data-label="Data Type"><span class="tag">Display Name</span></td>
             <!-- FIX 2: Changed from "nickname you choose yourself" to reflect predefined name system -->
             <td>A name selected from a safe, predefined list curated by FunMindo. No free-text entry is possible. Only used to display your name on the leaderboard.</td>
-            <td>Unity Gaming Services servers</td>
-            <td><span class="tag orange">Optional</span></td>
+            <td data-label="Where It Goes">Unity Gaming Services servers</td>
+            <td data-label="Required?"><span class="tag orange">Optional</span></td>
           </tr>
           <tr>
             <td data-label="Data Type"><span class="tag">Game Scores</span></td>
             <td data-label="What It Is">Your highest scores submitted to weekly and all-time leaderboards.</td>
-            <td>Unity Gaming Services servers</td>
-            <td><span class="tag orange">Optional</span></td>
+            <td data-label="Where It Goes">Unity Gaming Services servers</td>
+            <td data-label="Required?"><span class="tag orange">Optional</span></td>
           </tr>
           <tr>
             <td data-label="Data Type"><span class="tag">Device Info</span></td>
             <td data-label="What It Is">Device model, OS version, screen size. Collected automatically by ad and analytics SDKs for performance and ad delivery.</td>
-            <td>Google (AdMob / Firebase)</td>
-            <td><span class="tag green">Auto</span></td>
+            <td data-label="Where It Goes">Google (AdMob / Firebase)</td>
+            <td data-label="Required?"><span class="tag green">Auto</span></td>
           </tr>
           <tr>
             <td data-label="Data Type"><span class="tag">Advertising ID</span></td>
             <td data-label="What It Is">A resettable advertising identifier (Google Advertising ID) used to serve relevant ads. You can reset or opt out at any time in your device settings.</td>
-            <td>Google AdMob servers</td>
-            <td><span class="tag green">Auto</span></td>
+            <td data-label="Where It Goes">Google AdMob servers</td>
+            <td data-label="Required?"><span class="tag green">Auto</span></td>
           </tr>
           <tr>
             <td data-label="Data Type"><span class="tag">Crash &amp; Performance Data</span></td>
             <td data-label="What It Is">Anonymous crash reports and performance metrics used to fix bugs and improve stability.</td>
-            <td>Firebase Crashlytics (Google)</td>
-            <td><span class="tag green">Auto</span></td>
+            <td data-label="Where It Goes">Firebase Crashlytics (Google)</td>
+            <td data-label="Required?"><span class="tag green">Auto</span></td>
           </tr>
         </tbody>
       </table>
     </div>
     <p style="margin-top:14px; color: var(--muted); font-size:13px;">
-      ✅ We do <strong>not</strong> collect your real name, email address, phone number, location, photos, contacts, or any other sensitive personal information.
+      ✅ FunMindo does not directly collect personally identifiable information such as your real name, email address, phone number, location, or photos. Device-level data (Advertising ID, device info, crash reports) is collected automatically by third-party SDKs (Google AdMob, Firebase) — see Section 3 for details.
     </p>
   </div>
 
@@ -386,7 +385,7 @@
       <li>To measure ad performance and optimise ad frequency</li>
       <li>To comply with legal obligations under applicable Indian law</li>
     </ul>
-    <p style="margin-top:12px;">We do <strong>not</strong> sell, rent, or trade your personal information to any third party for their own marketing purposes.</p>
+    <p style="margin-top:12px;">FunMindo does not directly collect personally identifiable information and does not sell, rent, or trade any personal information to any third party for their own marketing purposes.</p>
   </div>
 
   <!-- ── 3. Third-Party Services ── -->
@@ -459,10 +458,6 @@
       <li><strong>Advertising &amp; analytics data</strong> — retained by Google per their own data retention policies.</li>
       <li>We do not operate our own servers and do not store any user data on FunMindo infrastructure.</li>
     </ul>
-    <div style="background:rgba(245,200,66,0.07);border:1px solid rgba(245,200,66,0.22);border-radius:10px;padding:14px 18px;margin-top:14px;display:flex;gap:10px;align-items:flex-start;font-size:13.5px;color:#f5e4a0;line-height:1.6;">
-      <span style="font-size:18px;flex-shrink:0;">⚠️</span>
-      <span><strong>Google Play Console — Data Safety:</strong> Even though FunMindo does not directly collect personal data, third-party SDKs integrated into Stack It! (Google AdMob, Firebase Analytics, Firebase Crashlytics) do collect device information and Advertising IDs on your device. When completing the Data Safety form in Play Console, you must declare this SDK-collected data. Do <em>not</em> select "No data collected" — mark the relevant data types collected by these SDKs.</span>
-    </div>
   </div>
 
   <!-- ── 6. Children's Privacy ── -->
@@ -473,7 +468,7 @@
     </div>
     <p>Stack It! is a casual game designed for a <strong>general audience</strong>, rated for Everyone (3+) on Google Play. This game is not specifically directed at children under 13 but is suitable for a general audience including children, subject to the safeguards described below.</p>
     <!-- FIX 2 + FIX 3: Removed "intended for 13+" and replaced with predefined name child-safety explanation -->
-    <p>We do not knowingly collect personally identifiable information from children. The leaderboard display name feature is designed for all ages. Because all names are predefined and curated by FunMindo, no player (including young children) can enter personal or inappropriate information — the predefined name system protects all users on the leaderboard.</p>
+    <p>FunMindo does not directly collect personally identifiable information from children or anyone else. The leaderboard display name feature is designed for all ages. Because all names are predefined and curated by FunMindo, no player (including young children) can enter personal or inappropriate information — the predefined name system protects all users on the leaderboard.</p>
     <p>If you are a parent or guardian and have any concerns about your child's data, please contact us immediately at <strong>funmindostudio@gmail.com</strong> and we will take steps to address the issue promptly.</p>
     <p>Our advertising is not specifically directed at children. We take reasonable steps to configure AdMob for a general audience; however, as ads are served by Google AdMob, FunMindo cannot guarantee the content of every individual ad.</p>
   </div>
