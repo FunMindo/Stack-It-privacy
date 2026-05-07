@@ -347,7 +347,7 @@
           <tr>
             <td data-label="Data Type"><span class="tag">Device Info</span></td>
             <td data-label="What It Is">Device model, OS version, screen size. Collected automatically by ad and analytics SDKs for performance and ad delivery.</td>
-            <td data-label="Where It Goes">Google (AdMob / Firebase)</td>
+            <td data-label="Where It Goes">Google AdMob servers</td>
             <td data-label="Required?"><span class="tag green">Auto</span></td>
           </tr>
           <tr>
@@ -356,17 +356,11 @@
             <td data-label="Where It Goes">Google AdMob servers</td>
             <td data-label="Required?"><span class="tag green">Auto</span></td>
           </tr>
-          <tr>
-            <td data-label="Data Type"><span class="tag">Crash &amp; Performance Data</span></td>
-            <td data-label="What It Is">Anonymous crash reports and performance metrics used to fix bugs and improve stability.</td>
-            <td data-label="Where It Goes">Firebase Crashlytics (Google)</td>
-            <td data-label="Required?"><span class="tag green">Auto</span></td>
-          </tr>
         </tbody>
       </table>
     </div>
     <p style="margin-top:14px; color: var(--muted); font-size:13px;">
-      ✅ FunMindo does not directly collect personally identifiable information such as your name, email address, or phone number. However, certain data such as device identifiers and Advertising IDs may be collected automatically by third-party services (e.g. Google AdMob, Firebase) integrated into the Game — see Section 4 for details.
+      ✅ FunMindo does not directly collect personally identifiable information such as your name, email address, or phone number. However, certain data such as device identifiers and Advertising IDs may be collected automatically by third-party services (e.g. Google AdMob) integrated into the Game — see Section 4 for details.
     </p>
     <p style="margin-top:8px; color: var(--muted); font-size:13px;">
       🔒 Stack It! does not require account creation, login, or registration of any kind. You can play the full game without providing any personal information.
@@ -382,8 +376,7 @@
     <ul class="pp-list">
       <li>To display your chosen name and score on global leaderboards (Weekly and All-Time)</li>
       <li>To serve advertisements through Google AdMob and generate revenue to keep the game free</li>
-      <li>To analyse gameplay patterns anonymously and improve game design</li>
-      <li>To detect, investigate, and fix crashes and technical bugs</li>
+      <li>To improve gameplay experience and maintain game functionality</li>
       <li>To measure ad performance and optimise ad frequency</li>
       <li>To comply with legal obligations under applicable Indian law</li>
     </ul>
@@ -398,8 +391,8 @@
     </div>
     <p>Under India's Digital Personal Data Protection Act, 2023 (DPDPA), FunMindo processes data on the following legal bases:</p>
     <ul class="pp-list">
-      <li><strong>Consent</strong> — By downloading and playing Stack It!, you consent to the collection of device identifiers and Advertising IDs by Google AdMob and Firebase for the purpose of serving advertisements and improving app performance. You may withdraw this consent at any time by uninstalling the Game or opting out of personalised ads in your device settings (see Section 5).</li>
-      <li><strong>Legitimate use</strong> — Leaderboard functionality (anonymous Player ID, predefined display name, scores) is processed for the legitimate purpose of enabling global score rankings. Crash and performance data is processed for the legitimate purpose of maintaining app stability and preventing fraud.</li>
+      <li><strong>Consent</strong> — By downloading and playing Stack It!, you consent to the collection of device identifiers and Advertising IDs by Google AdMob for the purpose of serving advertisements and improving app performance. You may withdraw this consent at any time by uninstalling the Game or opting out of personalised ads in your device settings (see Section 5).</li>
+      <li><strong>Legitimate use</strong> — Leaderboard functionality (anonymous Player ID, predefined display name, scores) is processed for the legitimate purpose of enabling global score rankings. Basic operational data may be processed for maintaining app functionality and preventing abuse.</li>
       <li><strong>Legal obligation</strong> — We may process and retain data to the extent required to comply with applicable Indian law, including the IT Act, 2000 and the DPDPA 2023.</li>
     </ul>
   </div>
@@ -418,14 +411,6 @@
           <div class="vendor-name">Google AdMob</div>
           <div class="vendor-desc">Delivers in-game advertisements. May collect device identifiers and Advertising IDs. FunMindo takes reasonable steps to configure ads for a general audience, but cannot guarantee the content of every individual ad served by AdMob. You may opt out of personalised advertising via your device's Google Settings → Ads.</div>
           <a class="vendor-link" href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy →</a>
-        </div>
-      </li>
-      <li>
-        <div class="vendor-icon">🔥</div>
-        <div>
-          <div class="vendor-name">Google Firebase (Analytics &amp; Crashlytics)</div>
-          <div class="vendor-desc">Collects anonymous usage data and crash reports to improve game stability and performance. No personally identifiable information is sent.</div>
-          <a class="vendor-link" href="https://firebase.google.com/support/privacy" target="_blank">firebase.google.com/support/privacy →</a>
         </div>
       </li>
       <li>
@@ -471,7 +456,6 @@
     <ul class="pp-list">
       <li><strong>Local device data</strong> (game progress, coins, settings) — stored only on your device via PlayerPrefs. Deleted when you uninstall the game.</li>
       <li><strong>Leaderboard name &amp; scores</strong> — stored on Unity Gaming Services servers for as long as the service is active or until you request deletion.</li>
-      <li><strong>Advertising &amp; analytics data</strong> — retained by Google per their own data retention policies.</li>
       <li><strong>No FunMindo backend.</strong> FunMindo does not operate its own backend servers or databases for user data storage. All user-related data is handled entirely by Unity Gaming Services and Google — FunMindo has no direct access to raw user data.</li>
     </ul>
   </div>
