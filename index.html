@@ -2,301 +2,584 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<meta name="description" content="Stack It! — free mobile stacking game by FunMindo. Coming soon to Android."/>
-<title>Stack It! · FunMindo</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Privacy Policy – Stack It! | FunMindo</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
 <style>
-/* ── RESET & VARS ── */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-:root {
-  --bg:        #0b0f1e;
-  --surface:   #111827;
-  --card:      #161d30;
-  --border:    rgba(99,120,200,0.18);
-  --accent:    #5b7cf7;
-  --accent2:   #8fa8ff;
-  --text:      #dce4ff;
-  --muted:     #7a8ab0;
-  --gold:      #f5c842;
-  --radius:    14px;
-}
+  :root {
+    --bg:        #0b0f1e;
+    --surface:   #111827;
+    --card:      #161d30;
+    --border:    rgba(99,120,200,0.18);
+    --accent:    #5b7cf7;
+    --accent2:   #8fa8ff;
+    --text:      #dce4ff;
+    --muted:     #7a8ab0;
+    --gold:      #f5c842;
+    --radius:    14px;
+  }
 
-html { scroll-behavior: smooth; font-size: 16px; }
-body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 400;
-  line-height: 1.75;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-}
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-/* Background Grid Pattern */
-body::before {
-  content: '';
-  position: fixed; inset: 0; z-index: 0;
-  background-image:
-    linear-gradient(rgba(91,124,247,0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(91,124,247,0.04) 1px, transparent 1px);
-  background-size: 40px 40px;
-  pointer-events: none;
-}
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.75;
+    font-size: 15px;
+    min-height: 100vh;
+  }
 
-img { display: block; max-width: 100%; height: auto; }
-a { text-decoration: none; }
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: var(--bg); }
-::-webkit-scrollbar-thumb { background: rgba(91,124,247,0.3); border-radius: 3px; }
+  body::before {
+    content: '';
+    position: fixed; inset: 0; z-index: 0;
+    background-image:
+      linear-gradient(rgba(91,124,247,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(91,124,247,0.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+  }
 
-/* ── LAYOUT WRAPPERS ── */
-.wrapper {
-  position: relative; z-index: 1;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 80px 24px;
-}
+  .wrapper {
+    position: relative; z-index: 1;
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+  }
 
-/* ── NAV ── */
-nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  height: 70px; display: flex; align-items: center; justify-content: space-between;
-  padding: 0 40px;
-  background: rgba(11, 15, 30, 0.85);
-  backdrop-filter: blur(16px);
-  border-bottom: 1px solid var(--border);
-  transition: height 0.3s;
-}
-nav.s { height: 60px; }
-.n-logo img { height: 38px; width: auto; object-fit: contain; }
-.n-links { display: flex; gap: 32px; list-style: none; align-items: center; }
-.n-links a { 
-  font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 700; 
-  letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); 
-  transition: color 0.2s; 
-}
-.n-links a:hover, .n-links a.active { color: var(--text); }
-.n-cta {
-  padding: 8px 20px;
-  background: rgba(91,124,247,0.1);
-  border: 1px solid var(--accent);
-  border-radius: 8px;
-  color: var(--accent2) !important;
-  transition: all 0.2s ease !important;
-}
-.n-cta:hover { background: var(--accent); color: #fff !important; box-shadow: 0 4px 14px rgba(91,124,247,0.3); }
+  /* ── Header ── */
+  .header { text-align: center; margin-bottom: 52px; }
 
-/* Hamburger Menu */
-.hbg { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 6px; }
-.hbg span { display: block; width: 24px; height: 2px; background: var(--text); border-radius: 2px; transition: 0.3s; }
-.hbg.o span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.hbg.o span:nth-child(2) { opacity: 0; }
-.hbg.o span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .studio-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(91,124,247,0.12);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 6px 16px;
+    font-family: 'Syne', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    margin-bottom: 20px;
+  }
+  .studio-badge::before { content: '🎮'; font-size: 14px; }
 
-/* Mobile Menu */
-.mob {
-  display: none; position: fixed; top: 70px; left: 0; right: 0; z-index: 99;
-  background: rgba(11, 15, 30, 0.98); backdrop-filter: blur(16px);
-  border-bottom: 1px solid var(--border);
-  flex-direction: column; padding: 20px 28px 30px; gap: 8px;
-}
-.mob.o { display: flex; }
-.mob a {
-  font-family: 'Syne', sans-serif; font-size: 16px; font-weight: 700;
-  letter-spacing: 0.05em; text-transform: uppercase; color: var(--text);
-  padding: 12px 0; border-bottom: 1px solid rgba(99,120,200,0.1); transition: color 0.2s;
-}
-.mob a:last-child { border: none; color: var(--accent2); margin-top: 8px; }
+  h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(26px, 5vw, 44px);
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    margin-bottom: 14px;
+  }
+  h1 span {
+    background: linear-gradient(120deg, var(--accent), var(--accent2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
 
-/* ── UI COMPONENTS ── */
-.studio-badge {
-  display: inline-flex; align-items: center; gap: 8px;
-  background: rgba(91,124,247,0.12);
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  padding: 6px 16px;
-  font-family: 'Syne', sans-serif; font-size: 12px; font-weight: 700;
-  letter-spacing: 0.12em; text-transform: uppercase;
-  color: var(--accent2); margin-bottom: 20px;
-}
-.studio-badge::before { content: '🎮'; font-size: 14px; }
+  .header-meta { color: var(--muted); font-size: 13.5px; }
+  .header-meta strong { color: var(--accent2); }
 
-.section {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 32px;
-  transition: border-color 0.2s;
-  height: 100%;
-}
-.section:hover { border-color: rgba(91,124,247,0.35); }
+  /* ── Notice banner ── */
+  .notice {
+    background: rgba(245,200,66,0.07);
+    border: 1px solid rgba(245,200,66,0.25);
+    border-radius: var(--radius);
+    padding: 16px 20px;
+    margin-bottom: 36px;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    font-size: 13.5px;
+    color: #f5e4a0;
+    line-height: 1.6;
+  }
+  .notice-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
 
-.tag {
-  display: inline-block; background: rgba(91,124,247,0.15);
-  color: var(--accent2); border-radius: 6px; padding: 4px 10px;
-  font-size: 12px; font-weight: 600; white-space: nowrap;
-}
+  /* ── Section cards ── */
+  .section {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px 28px 24px;
+    margin-bottom: 18px;
+    transition: border-color 0.2s;
+  }
+  .section:hover { border-color: rgba(91,124,247,0.35); }
 
-/* ── HERO ── */
-#home {
-  min-height: 100vh;
-  display: flex; align-items: center; justify-content: center;
-  padding-top: 120px; padding-bottom: 60px;
-}
-.h-inner {
-  display: grid; grid-template-columns: 1fr auto; gap: 64px; align-items: center; width: 100%;
-}
-h1 {
-  font-family: 'Syne', sans-serif; font-size: clamp(40px, 6vw, 72px);
-  font-weight: 800; color: #fff; letter-spacing: -0.02em; line-height: 1.1; margin-bottom: 16px;
-}
-h1 span {
-  background: linear-gradient(120deg, var(--accent), var(--accent2));
-  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-}
-.h-sub {
-  font-size: 17px; color: var(--muted); line-height: 1.7;
-  max-width: 480px; margin-bottom: 32px;
-}
-.h-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 36px; }
+  .section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
 
-.h-btns { display: flex; gap: 16px; flex-wrap: wrap; }
-.btn-p {
-  display: inline-flex; align-items: center; gap: 8px;
-  padding: 14px 28px; background: var(--accent); color: #fff;
-  font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 700;
-  letter-spacing: 0.05em; text-transform: uppercase; border-radius: 8px;
-  transition: box-shadow 0.25s, transform 0.2s, background 0.2s;
-}
-.btn-p:hover { background: #4a68db; box-shadow: 0 6px 20px rgba(91,124,247,0.3); transform: translateY(-2px); }
-.btn-s {
-  display: inline-flex; align-items: center; gap: 8px;
-  padding: 14px 28px; border: 1px solid var(--border); background: var(--surface);
-  font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 700;
-  letter-spacing: 0.05em; text-transform: uppercase; color: var(--text); border-radius: 8px;
-  transition: border-color 0.25s, color 0.25s;
-}
-.btn-s:hover { border-color: var(--accent); color: var(--accent2); }
+  .section-num {
+    width: 28px; height: 28px;
+    background: linear-gradient(135deg, var(--accent), #3a5bd4);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Syne', sans-serif;
+    font-size: 12px; font-weight: 800;
+    color: #fff; flex-shrink: 0;
+  }
 
-.h-right { display: flex; flex-direction: column; align-items: center; gap: 20px; }
-.icon-wrap {
-  width: 280px; height: 280px; border-radius: 28px; overflow: hidden;
-  border: 1px solid var(--border);
-  box-shadow: 0 24px 60px rgba(0,0,0,0.4), 0 0 40px rgba(91,124,247,0.15);
-}
-.icon-wrap img { width: 100%; height: 100%; object-fit: cover; }
-.store-badge {
-  display: flex; align-items: center; gap: 12px; padding: 12px 20px;
-  background: var(--surface); border: 1px solid var(--border);
-  border-radius: 12px; width: 100%; max-width: 240px; transition: border-color 0.2s;
-}
-.store-badge:hover { border-color: var(--accent); }
-.sb-ico { font-size: 24px; }
-.sb-top { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
-.sb-name { font-size: 16px; font-weight: 700; color: #fff; line-height: 1.2; font-family: 'Syne', sans-serif; margin-bottom: 2px;}
-.sb-status { font-size: 11px; font-weight: 600; color: #f5c842; }
+  h2 {
+    font-family: 'Syne', sans-serif;
+    font-size: 16px; font-weight: 700;
+    color: #fff; letter-spacing: 0.01em;
+  }
 
-/* ── GAME & SUPPORT GLOBALS ── */
-.sec-header-block { text-align: left; margin-bottom: 48px; max-width: 600px; }
-.sec-title {
-  font-family: 'Syne', sans-serif; font-size: clamp(28px, 4vw, 40px);
-  font-weight: 800; color: #fff; letter-spacing: -0.01em; margin-bottom: 16px;
-}
-.sec-lead { font-size: 16px; color: var(--muted); line-height: 1.7; }
-.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+  p { color: var(--text); margin-bottom: 10px; }
+  p:last-child { margin-bottom: 0; }
 
-/* ── LIST STYLES (inside sections) ── */
-.card-title { font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 24px; }
-.feature-list { list-style: none; display: flex; flex-direction: column; gap: 16px; }
-.feature-list li {
-  display: flex; align-items: flex-start; gap: 14px;
-  padding-bottom: 16px; border-bottom: 1px solid rgba(99,120,200,0.08);
-}
-.feature-list li:last-child { border-bottom: none; padding-bottom: 0; }
-.f-icon {
-  width: 36px; height: 36px; border-radius: 10px; flex-shrink: 0;
-  display: flex; align-items: center; justify-content: center;
-  background: linear-gradient(135deg, var(--accent), #3a5bd4);
-  color: #fff; font-family: 'Syne', sans-serif; font-weight: 800; font-size: 14px;
-}
-.f-icon.emoji { background: rgba(91,124,247,0.1); font-size: 18px; }
-.f-text h3 { font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 700; color: #fff; margin-bottom: 4px; }
-.f-text p { font-size: 14px; color: var(--muted); line-height: 1.6; margin: 0; }
+  /* ── Data table ── */
+  .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; margin-top: 6px; -webkit-overflow-scrolling: touch; }
 
-/* ── SUPPORT SPECIFICS ── */
-.contact-card {
-  background: linear-gradient(135deg, rgba(91,124,247,0.12), rgba(91,124,247,0.04));
-  border: 1px solid rgba(91,124,247,0.3);
-  border-radius: var(--radius); padding: 24px; margin-bottom: 24px;
-  display: flex; align-items: flex-start; gap: 16px;
-}
-.contact-card .contact-icon { font-size: 28px; flex-shrink: 0; }
-.contact-card h3 { font-family: 'Syne', sans-serif; font-size: 16px; font-weight: 700; color: #fff; margin-bottom: 6px; }
-.contact-card p { font-size: 14px; color: var(--muted); margin-bottom: 8px; }
-.contact-card a { color: var(--accent2); font-weight: 500; }
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+  }
+  .data-table th {
+    background: rgba(91,124,247,0.1);
+    color: var(--accent2);
+    font-family: 'Syne', sans-serif;
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 10px 14px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+  }
+  .data-table td {
+    padding: 11px 14px;
+    border-bottom: 1px solid rgba(99,120,200,0.08);
+    color: var(--text);
+    vertical-align: top;
+  }
+  .data-table tr:last-child td { border-bottom: none; }
+  .data-table tr:hover td { background: rgba(91,124,247,0.04); }
 
-.legal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-.legal-card {
-  display: flex; flex-direction: column; padding: 20px;
-  background: var(--surface); border: 1px solid var(--border);
-  border-radius: 12px; transition: transform 0.2s, border-color 0.2s;
-}
-.legal-card:hover { transform: translateY(-3px); border-color: var(--accent); }
-.lc-icon { font-size: 20px; margin-bottom: 12px; }
-.lc-title { font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 700; color: #fff; margin-bottom: 6px; }
-.lc-desc { font-size: 13px; color: var(--muted); line-height: 1.5; flex-grow: 1; margin-bottom: 14px; }
-.lc-link { 
-  font-family: 'Syne', sans-serif; font-size: 12px; font-weight: 700; 
-  letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent);
-}
+  .tag {
+    display: inline-block;
+    background: rgba(91,124,247,0.15);
+    color: var(--accent2);
+    border-radius: 4px;
+    padding: 1px 7px;
+    font-size: 11.5px; font-weight: 500;
+    white-space: nowrap;
+  }
+  .tag.green { background: rgba(52,211,153,0.12); color: #6ee7b7; }
+  .tag.orange { background: rgba(251,146,60,0.12); color: #fdba74; }
 
-/* ── FOOTER ── */
-footer {
-  margin-top: 40px; padding: 40px 24px;
-  border-top: 1px solid var(--border);
-  background: var(--surface); text-align: center;
-}
-.ft-inner { max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 20px; }
-.ft-logo img { height: 36px; width: auto; object-fit: contain; }
-.ft-copy { font-size: 14px; color: var(--muted); }
-.ft-links { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
-.ft-links a { font-size: 13.5px; color: var(--accent2); font-weight: 500; transition: color 0.2s; }
-.ft-links a:hover { color: #fff; text-decoration: underline; }
-.ft-links span { color: rgba(99,120,200,0.3); }
+  /* ── Vendor list ── */
+  .vendor-list { list-style: none; margin-top: 6px; }
+  .vendor-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(99,120,200,0.08);
+    font-size: 14px;
+  }
+  .vendor-list li:last-child { border-bottom: none; padding-bottom: 0; }
+  .vendor-icon {
+    width: 32px; height: 32px;
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px; flex-shrink: 0;
+    background: rgba(91,124,247,0.1);
+  }
+  .vendor-name { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 13.5px; color: #fff; margin-bottom: 2px; }
+  .vendor-desc { color: var(--muted); font-size: 13px; }
+  .vendor-link { display: inline-block; margin-top: 4px; font-size: 12px; color: var(--accent); text-decoration: none; }
+  .vendor-link:hover { text-decoration: underline; }
 
-/* ── REVEAL ANIMATIONS ── */
-.r { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease; }
-.r.v { opacity: 1; transform: none; }
+  /* ── Bullet list ── */
+  .pp-list { list-style: none; margin-top: 6px; }
+  .pp-list li {
+    padding: 5px 0 5px 20px;
+    position: relative;
+    font-size: 14px; color: var(--text);
+  }
+  .pp-list li::before {
+    content: '→';
+    position: absolute; left: 0;
+    color: var(--accent); font-size: 12px; top: 7px;
+  }
 
-/* ── RESPONSIVE ── */
-@media(max-width: 900px) {
-  .h-inner { grid-template-columns: 1fr; text-align: center; gap: 48px; }
-  .h-sub { margin: 0 auto 32px; }
-  .h-tags, .h-btns { justify-content: center; }
-  .h-right { order: -1; }
-  .grid-2 { grid-template-columns: 1fr; }
-  .sec-header-block { margin: 0 auto 32px; text-align: center; }
-  .icon-wrap { width: 220px; height: 220px; }
-}
+  /* ── Contact card ── */
+  .contact-card {
+    background: linear-gradient(135deg, rgba(91,124,247,0.12), rgba(91,124,247,0.04));
+    border: 1px solid rgba(91,124,247,0.3);
+    border-radius: var(--radius);
+    padding: 24px 28px;
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .contact-icon { font-size: 28px; flex-shrink: 0; }
+  .contact-text h3 {
+    font-family: 'Syne', sans-serif;
+    font-size: 15px; font-weight: 700;
+    color: #fff; margin-bottom: 4px;
+  }
+  .contact-text p { font-size: 13.5px; color: var(--muted); margin: 0; }
+  .contact-text a { color: var(--accent2); text-decoration: none; font-weight: 500; }
+  .contact-text a:hover { text-decoration: underline; }
 
-@media(max-width: 640px) {
-  nav { padding: 0 24px; }
-  .n-links { display: none; }
-  .hbg { display: flex; }
-  .wrapper { padding: 60px 20px; }
-  .section { padding: 24px 20px; }
-  .legal-grid { grid-template-columns: 1fr; }
-  .icon-wrap { width: 180px; height: 180px; }
-  h1 { font-size: clamp(32px, 8vw, 42px); }
-  .ft-inner { gap: 16px; }
-}
+  /* ── Footer ── */
+  .footer {
+    margin-top: 48px;
+    padding-top: 28px;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    color: var(--muted);
+    font-size: 12.5px;
+    line-height: 1.8;
+  }
+  .footer strong { color: var(--accent2); }
+  .footer a { color: var(--accent2); text-decoration: none; }
+  .footer a:hover { text-decoration: underline; }
+
+  /* ── Mobile / Tablet ── */
+  /* ── Mobile (≤640px) ── */
+  @media (max-width: 640px) {
+    .wrapper { padding: 24px 14px 56px; }
+    .section { padding: 16px 14px 14px; margin-bottom: 14px; }
+    .section-header { gap: 8px; margin-bottom: 12px; }
+    .header { margin-bottom: 28px; }
+    .studio-badge { font-size: 11px; padding: 5px 12px; }
+    h1 { font-size: clamp(22px, 8vw, 30px); }
+    h2 { font-size: 14px; }
+    p, .pp-list li { font-size: 13.5px; }
+    .notice { padding: 13px 14px; font-size: 13px; gap: 10px; }
+    .data-table th { font-size: 11px; padding: 8px 8px; }
+    .data-table td { font-size: 12.5px; padding: 9px 9px; }
+    /* Stack table on very narrow screens */
+    .data-table thead { display: none; }
+    .data-table tr { display: block; border-bottom: 1px solid rgba(99,120,200,0.15); padding: 8px 0; }
+    .data-table td { display: block; border: none; padding: 3px 9px; font-size: 13px; }
+    .data-table td::before { content: attr(data-label); display: block; font-size: 11px; font-weight: 700; color: var(--accent2); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 2px; }
+    .vendor-list li { flex-direction: column; gap: 6px; }
+    .contact-card { flex-direction: column; padding: 16px 14px; gap: 10px; }
+    .contact-card .contact-icon { font-size: 22px; }
+    .contact-text h3 { font-size: 14px; }
+    .tag { font-size: 11px; padding: 1px 6px; }
+    .pp-list li { padding-left: 18px; }
+  }
+
+  /* ── Tablet (641–1024px) ── */
+  @media (min-width: 641px) and (max-width: 1024px) {
+    .wrapper { padding: 36px 24px 68px; }
+    .section { padding: 22px 20px; }
+    h1 { font-size: clamp(26px, 4vw, 36px); }
+  }
 </style>
 </head>
 <body>
+<div class="wrapper">
 
-<nav id="nb">
-  <a href="#home" class="n-logo">
-    <img src="data:image/png;base64,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
+  <!-- ── Header ── -->
+  <header class="header">
+    <div class="studio-badge">FunMindo Studio</div>
+    <h1>Privacy Policy<br/><span>Stack It!</span></h1>
+    <!-- FIX 4: Effective date aligned to April 25 to match EULA & Data Deletion (launch date) -->
+    <p class="header-meta">
+      Effective Date: <strong>April 25, 2026</strong> &nbsp;·&nbsp;
+      Last Updated: <strong>April 25, 2026</strong> &nbsp;·&nbsp;
+      Jurisdiction: <strong>India</strong>
+    </p>
+  </header>
+
+  <!-- ── Intro notice ── -->
+  <div class="notice">
+    <span class="notice-icon">📋</span>
+    <span>
+      This Privacy Policy describes how <strong>FunMindo</strong> ("we", "our", "us") collects,
+      uses, and protects information in connection with the mobile game
+      <strong>Stack It!</strong> ("the Game"). This policy applies solely to Stack It! and not to any other game or service published by FunMindo, which may have separate policies. By downloading or playing Stack It!, you agree to the terms described in this policy. If you do not agree, please uninstall the Game.
+    </span>
+  </div>
+
+  <!-- ── 1. Information We Collect ── -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">1</div>
+      <h2>Information We Collect</h2>
+    </div>
+    <p>We collect only what is necessary to operate the Game and its features. The table below details exactly what is collected, why, and where it goes.</p>
+    <div class="table-scroll">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Data Type</th>
+            <th>What It Is</th>
+            <th>Where It Goes</th>
+            <th>Required?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Data Type"><span class="tag">Anonymous Player ID</span></td>
+            <td data-label="What It Is">A randomly generated ID with no personal information attached. Not linked to your name, email, or device identity.</td>
+            <td data-label="Where It Goes">Unity Gaming Services servers</td>
+            <td data-label="Required?"><span class="tag green">Auto</span></td>
+          </tr>
+          <tr>
+            <td data-label="Data Type"><span class="tag">Display Name</span></td>
+            <!-- FIX 2: Changed from "nickname you choose yourself" to reflect predefined name system -->
+            <td>A name selected from a safe, predefined list curated by FunMindo. No free-text entry is possible. Only used to display your name on the leaderboard.</td>
+            <td data-label="Where It Goes">Unity Gaming Services servers</td>
+            <td data-label="Required?"><span class="tag orange">Optional</span></td>
+          </tr>
+          <tr>
+            <td data-label="Data Type"><span class="tag">Game Scores</span></td>
+            <td data-label="What It Is">Your highest scores submitted to weekly and all-time leaderboards.</td>
+            <td data-label="Where It Goes">Unity Gaming Services servers</td>
+            <td data-label="Required?"><span class="tag orange">Optional</span></td>
+          </tr>
+          <tr>
+            <td data-label="Data Type"><span class="tag">Device Info</span></td>
+            <td data-label="What It Is">Device model, OS version, screen size. Collected automatically by ad and analytics SDKs for performance and ad delivery.</td>
+            <td data-label="Where It Goes">Google (AdMob / Firebase)</td>
+            <td data-label="Required?"><span class="tag green">Auto</span></td>
+          </tr>
+          <tr>
+            <td data-label="Data Type"><span class="tag">Advertising ID</span></td>
+            <td data-label="What It Is">A resettable advertising identifier (Google Advertising ID) used to serve relevant ads. You can reset or opt out at any time in your device settings.</td>
+            <td data-label="Where It Goes">Google AdMob servers</td>
+            <td data-label="Required?"><span class="tag green">Auto</span></td>
+          </tr>
+          <tr>
+            <td data-label="Data Type"><span class="tag">Crash &amp; Performance Data</span></td>
+            <td data-label="What It Is">Anonymous crash reports and performance metrics used to fix bugs and improve stability.</td>
+            <td data-label="Where It Goes">Firebase Crashlytics (Google)</td>
+            <td data-label="Required?"><span class="tag green">Auto</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:14px; color: var(--muted); font-size:13px;">
+      ✅ FunMindo does not directly collect personally identifiable information such as your name, email address, or phone number. However, certain data such as device identifiers and Advertising IDs may be collected automatically by third-party services (e.g. Google AdMob, Firebase) integrated into the Game — see Section 4 for details.
+    </p>
+    <p style="margin-top:8px; color: var(--muted); font-size:13px;">
+      🔒 Stack It! does not require account creation, login, or registration of any kind. You can play the full game without providing any personal information.
+    </p>
+  </div>
+
+  <!-- ── 2. How We Use Your Information ── -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">2</div>
+      <h2>How We Use Your Information</h2>
+    </div>
+    <ul class="pp-list">
+      <li>To display your chosen name and score on global leaderboards (Weekly and All-Time)</li>
+      <li>To serve advertisements through Google AdMob and generate revenue to keep the game free</li>
+      <li>To analyse gameplay patterns anonymously and improve game design</li>
+      <li>To detect, investigate, and fix crashes and technical bugs</li>
+      <li>To measure ad performance and optimise ad frequency</li>
+      <li>To comply with legal obligations under applicable Indian law</li>
+    </ul>
+    <p style="margin-top:12px;">FunMindo does not directly collect personally identifiable information such as name, email, or phone number. FunMindo does not sell, rent, or trade any personal information to any third party for their own marketing purposes.</p>
+  </div>
+
+  <!-- ── 3. Legal Basis for Processing (India — DPDPA 2023) ── -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">3</div>
+      <h2>Legal Basis for Processing</h2>
+    </div>
+    <p>Under India's Digital Personal Data Protection Act, 2023 (DPDPA), FunMindo processes data on the following legal bases:</p>
+    <ul class="pp-list">
+      <li><strong>Consent</strong> — By downloading and playing Stack It!, you consent to the collection of device identifiers and Advertising IDs by Google AdMob and Firebase for the purpose of serving advertisements and improving app performance. You may withdraw this consent at any time by uninstalling the Game or opting out of personalised ads in your device settings (see Section 5).</li>
+      <li><strong>Legitimate use</strong> — Leaderboard functionality (anonymous Player ID, predefined display name, scores) is processed for the legitimate purpose of enabling global score rankings. Crash and performance data is processed for the legitimate purpose of maintaining app stability and preventing fraud.</li>
+      <li><strong>Legal obligation</strong> — We may process and retain data to the extent required to comply with applicable Indian law, including the IT Act, 2000 and the DPDPA 2023.</li>
+    </ul>
+  </div>
+
+  <!-- ── 4. Third-Party Services & SDKs ── -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">4</div>
+      <h2>Third-Party Services &amp; SDKs</h2>
+    </div>
+    <p>Stack It! integrates the following third-party services. Each operates under its own privacy policy — please review them individually.</p>
+    <ul class="vendor-list">
+      <li>
+        <div class="vendor-icon">📢</div>
+        <div>
+          <div class="vendor-name">Google AdMob</div>
+          <div class="vendor-desc">Delivers in-game advertisements. May collect device identifiers and Advertising IDs. FunMindo takes reasonable steps to configure ads for a general audience, but cannot guarantee the content of every individual ad served by AdMob. You may opt out of personalised advertising via your device's Google Settings → Ads.</div>
+          <a class="vendor-link" href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy →</a>
+        </div>
+      </li>
+      <li>
+        <div class="vendor-icon">🔥</div>
+        <div>
+          <div class="vendor-name">Google Firebase (Analytics &amp; Crashlytics)</div>
+          <div class="vendor-desc">Collects anonymous usage data and crash reports to improve game stability and performance. No personally identifiable information is sent.</div>
+          <a class="vendor-link" href="https://firebase.google.com/support/privacy" target="_blank">firebase.google.com/support/privacy →</a>
+        </div>
+      </li>
+      <li>
+        <div class="vendor-icon">🎮</div>
+        <div>
+          <div class="vendor-name">Unity Gaming Services (UGS)</div>
+          <div class="vendor-desc">Powers anonymous authentication and global leaderboards. Stores your predefined display name and scores. A randomly generated Player ID is used — no personal data is required to participate.</div>
+          <a class="vendor-link" href="https://unity.com/legal/privacy-policy" target="_blank">unity.com/legal/privacy-policy →</a>
+        </div>
+      </li>
+      <li>
+        <div class="vendor-icon">🏪</div>
+        <div>
+          <div class="vendor-name">Google Play Services</div>
+          <div class="vendor-desc">Used for app distribution and updates on Android devices. Subject to Google's privacy policy.</div>
+          <a class="vendor-link" href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy →</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- ── 5. Advertising & Your Choices ── -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">5</div>
+      <h2>Advertising &amp; Your Choices</h2>
+    </div>
+    <p>Stack It! is free to play and is supported by advertisements delivered by <strong>Google AdMob</strong>. AdMob may use your device's Advertising ID to show you relevant ads based on your interests.</p>
+    <p><strong>You can opt out of personalised ads at any time:</strong></p>
+    <ul class="pp-list">
+      <li><strong>Android:</strong> Settings → Google → Ads → "Opt out of Ads Personalisation"</li>
+      <li><strong>Reset your Advertising ID:</strong> Settings → Google → Ads → "Reset advertising ID"</li>
+    </ul>
+    <p style="margin-top:10px;">Opting out means you will still see ads, but they will not be personalised to your interests. Game functionality is not affected.</p>
+  </div>
+
+  <!-- ── 6. Data Storage & Retention ── -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">6</div>
+      <h2>Data Storage &amp; Retention</h2>
+    </div>
+    <ul class="pp-list">
+      <li><strong>Local device data</strong> (game progress, coins, settings) — stored only on your device via PlayerPrefs. Deleted when you uninstall the game.</li>
+      <li><strong>Leaderboard name &amp; scores</strong> — stored on Unity Gaming Services servers for as long as the service is active or until you request deletion.</li>
+      <li><strong>Advertising &amp; analytics data</strong> — retained by Google per their own data retention policies.</li>
+      <li><strong>No FunMindo backend.</strong> FunMindo does not operate its own backend servers or databases for user data storage. All user-related data is handled entirely by Unity Gaming Services and Google — FunMindo has no direct access to raw user data.</li>
+    </ul>
+  </div>
+
+  <!-- ── 7. Children's Privacy ── -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">7</div>
+      <h2>Children's Privacy</h2>
+    </div>
+    <p>Stack It! is designed for a <strong>general audience, including children</strong>, and is rated for Everyone (3+) on Google Play. We take reasonable steps to configure advertisements appropriately for such mixed-age audiences, including limiting ad personalisation where applicable, in line with Google Play Families policy.</p>
+    <!-- FIX 2 + FIX 3: Removed "intended for 13+" and replaced with predefined name child-safety explanation -->
+    <p>FunMindo does not directly collect personally identifiable information — such as name, email, or phone number — from children or anyone else. The leaderboard display name feature is designed for all ages. Because all names are predefined and curated by FunMindo, no player (including young children) can enter personal or inappropriate information — the predefined name system protects all users on the leaderboard.</p>
+    <p>If you are a parent or guardian and have any concerns about your child's data, please contact us immediately at <strong>funmindostudio@gmail.com</strong> and we will take steps to address the issue promptly.</p>
+    <p>Our advertising is configured for a general audience. We take reasonable steps to limit ad personalisation for mixed-age audiences in line with Google Play Families policy; however, as ads are served by Google AdMob, FunMindo cannot guarantee the content of every individual advertisement served.</p>
+  </div>
+
+  <!-- ── 8. Data Security ── -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">8</div>
+      <h2>Data Security</h2>
+    </div>
+    <p>We take reasonable steps to protect the information handled through Stack It!. However, please be aware that no method of transmission over the internet or electronic storage is 100% secure. We rely on industry-standard third-party services (Google, Unity) that maintain their own security practices.</p>
+    <p>Since we do not operate our own servers or databases, FunMindo does not store, process, or have access to personally identifiable information beyond what is visible on the public leaderboard.</p>
+  </div>
+
+  <!-- ── 9. Your Rights ── -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">9</div>
+      <h2>Your Rights</h2>
+    </div>
+    <p>You have the right to:</p>
+    <ul class="pp-list">
+      <li><strong>Access</strong> — Request information about what data we hold about you</li>
+      <li><strong>Deletion</strong> — Request deletion of your leaderboard name and scores</li>
+      <!-- FIX 5: Correction right now accurately reflects that in-game name change is not possible after saving -->
+      <li><strong>Correction</strong> — Your leaderboard display name cannot be changed after saving. If you need it corrected, contact us at funmindostudio@gmail.com and we will assist</li>
+      <li><strong>Opt-out</strong> — Disable personalised advertising via device settings (see Section 4)</li>
+      <li><strong>Withdraw consent</strong> — Uninstall the game to stop all data collection</li>
+    </ul>
+    <p style="margin-top:10px;">To exercise any of these rights, contact us at <strong>funmindostudio@gmail.com</strong>. We will respond within <strong>30 days</strong> in accordance with applicable Indian law (Information Technology Act, 2000 and the Digital Personal Data Protection Act, 2023).</p>
+  </div>
+
+  <!-- ── 10. Changes to This Policy ── -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">10</div>
+      <h2>Changes to This Policy</h2>
+    </div>
+    <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with a revised "Last Updated" date. We encourage you to review this policy periodically. Continued use of Stack It! after any changes constitutes your acceptance of the updated policy.</p>
+    <p>For significant changes, we will make reasonable efforts to notify users through an in-game notice or Play Store update description.</p>
+  </div>
+
+
+  <!-- ── 11. Grievance Officer (India — DPDPA 2023) ── -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">11</div>
+      <h2>Grievance Officer</h2>
+    </div>
+    <p>In accordance with the Information Technology Act, 2000 and the Digital Personal Data Protection Act, 2023, the details of the Grievance Officer are provided below. Users may raise complaints or concerns related to this Privacy Policy by contacting the Grievance Officer directly.</p>
+    <div class="contact-card" style="margin-top:14px; padding:18px 22px;">
+      <div class="contact-icon">🏛️</div>
+      <div class="contact-text">
+        <h3>Grievance Officer — FunMindo</h3>
+        <p>
+          Organisation: <strong style="color:var(--accent2);">FunMindo</strong><br/>
+          Country of Operation: <strong style="color:var(--accent2);">India</strong><br/>
+          Email: <a href="mailto:funmindostudio@gmail.com">funmindostudio@gmail.com</a><br/>
+          Response time: Within 30 days of receiving your complaint
+        </p>
+      </div>
+    </div>
+    <p style="margin-top:12px; color:var(--muted); font-size:13px;">We take all grievances seriously. If you are not satisfied with our response, you may approach the Data Protection Board of India once it is operational.</p>
+  </div>
+
+  <!-- ── 12. Governing Law ── -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">12</div>
+      <h2>Governing Law</h2>
+    </div>
+    <p>FunMindo operates from <strong>India</strong>. This Privacy Policy is governed by and construed in accordance with the laws of India, including the Information Technology Act, 2000 and the Digital Personal Data Protection Act, 2023 (DPDPA). Any disputes arising out of this policy shall be subject to the exclusive jurisdiction of competent courts in India.</p>
+  </div>
+
+  <!-- ── Contact ── -->
+  <div class="contact-card">
+    <div class="contact-icon">✉️</div>
+    <div class="contact-text">
+      <h3>Contact FunMindo</h3>
+      <p>Questions about this policy or your data? We respond within 30 days.<br/>
+        Email us at: <a href="mailto:funmindostudio@gmail.com">funmindostudio@gmail.com</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- ── Footer ── -->
+  <footer class="footer">
+    <p>© 2026 <strong>FunMindo</strong>. All rights reserved.</p>
+    <p>Stack It! &nbsp;·&nbsp; Version 1.0 &nbsp;·&nbsp; Privacy Policy v1.0</p>
+    <!-- FIX 4: Footer date updated to match -->
+    <p style="margin-top:8px; font-size:11.5px; color:#4a5578;">
+      This document was last reviewed on April 25, 2026.
+    </p>
+  </footer>
+
+</div>
+</body>
+</html>
